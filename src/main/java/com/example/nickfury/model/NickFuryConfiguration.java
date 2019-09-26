@@ -1,16 +1,23 @@
 package com.example.nickfury.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConfigurationProperties(prefix = "myservice.profile")
 public class NickFuryConfiguration {
 
-    @Autowired
-    Environment environment;
+    private String name;
 
     public String getProfileName() {
-        return environment.getProperty("myservice.profile.name");
+        return name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

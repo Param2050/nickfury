@@ -4,5 +4,30 @@ spring:
       uri: http://localhost:9091
   application:
     name: nick
-  profiles:
-    active: uat
+  profiles: dev
+server:
+  address: 127.0.0.1
+
+---
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:9091
+  application:
+    name: nick
+  profiles: uat
+server:
+  address: 127.0.0.1
+
+---
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:9091
+  application:
+    name: nick
+  profiles: prod
+server:
+  address: 127.0.0.1
