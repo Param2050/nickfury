@@ -3,10 +3,8 @@ spring:
     config:
       uri: http://localhost:9091
   application:
-    name: nick
+    name: nickfury
   profiles: dev
-server:
-  address: 127.0.0.1
 
 ---
 
@@ -15,10 +13,8 @@ spring:
     config:
       uri: http://localhost:9091
   application:
-    name: nick
+    name: nickfury
   profiles: uat
-server:
-  address: 127.0.0.1
 
 ---
 
@@ -27,7 +23,5 @@ spring:
     config:
       uri: http://localhost:9091
   application:
-    name: nick
+    name: nickfury
   profiles: prod
-server:
-  address: 127.0.0.1
